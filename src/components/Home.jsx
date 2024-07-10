@@ -4,10 +4,10 @@ export default function Home() {
     return (
         <section className='row seccion' >
             <div className='col'>
-                <img className='foto' src="../../public/vinos.jpg" alt="vinos" />
+                <img className='foto' src="../../vinos.jpg" alt="vinos" />
             </div>
             <div className='col-5'>
-                <img className='logo' src="../../public/logo.png" alt="logo" />
+                <img className='logo' src="../../logo.png" alt="logo" />
                 <h1 className='titulo-precios text-white'>Bodegas 2024</h1>
                 <nav className='navBar'>
                     <ul>
