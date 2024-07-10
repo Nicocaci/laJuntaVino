@@ -1,0 +1,25 @@
+.foto{
+    width: 40vw;
+    height: 100vh;
+}
+
+
+.logo{
+    width: 20vw;
+    border-radius: 50%;
+    margin-top: 5%;
+}
+.titulo-precios{
+    margin-top: 20%;
+}
+
+.navBar{
+    text-decoration:none;
+}
+
+a{
+    text-decoration: none;
+}
+.seccion{
+    border-bottom: 5px solid white;
+}
