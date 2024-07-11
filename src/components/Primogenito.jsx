@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { obtenerTodosLosVinos, obtenerVinosPorBodega } from "../asyncmock";
+import '../css/Primogenito.css'
 
 
 
@@ -26,7 +27,9 @@ export default function Primogenito (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="primogenito" className="center" >Vinos Primogenito</h1>
+                <div className="center">
+                    <img className=' logoBodegas' src="../../logoprimogenito.svg" alt="" />
+                </div>
                 <div className="container">
                 <div className="table-container">   
                 <table className="table table-dark table-striped w-70 m-auto">

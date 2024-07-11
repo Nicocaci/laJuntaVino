@@ -25,7 +25,9 @@ export default function Gauchezco (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="gauchezco" className="center" >Gauchezco</h1>
+                <div className="center">
+                    <img className="logoBodegas" src="https://gauchezco.com/cdn/shop/t/2/assets/logo.png?v=153744729930749575201539804183" alt="logoG" />
+                </div>
                 <div className="container">
                 <div className="table-container">
                 <table className="table table-dark table-striped w-70 m-auto">

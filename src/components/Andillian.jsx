@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { obtenerTodosLosVinos, obtenerVinosPorBodega } from "../asyncmock";
 import '../css/FincaIral.css'
+import '../css/Andillian.css'
 
 
 
@@ -26,7 +27,9 @@ export default function Andillian (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="andillian" className="center" >Vinos Andillian</h1>
+                <div className="center">
+                    <img className="logoAndillian" src="logoAndillian.jpg" alt="" />
+                </div>
                 <div className="container">
                 <div className="table-container">
                 <table className="table table-dark table-striped w-50 m-auto">

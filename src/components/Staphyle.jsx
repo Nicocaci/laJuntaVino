@@ -26,7 +26,9 @@ export default function Staphyle (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="staphyle" className="center" >Vinos Staphyle</h1>
+                <div className="center">
+                    <img className="logoBodegas" src="https://www.staphyle.com/img/staphyle-logo.png" alt="logoS" />
+                </div>
                 <div className="container">
                 <div className="table-container">
                 <table className="table table-dark table-striped w-70 m-auto">

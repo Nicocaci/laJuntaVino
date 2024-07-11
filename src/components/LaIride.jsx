@@ -25,7 +25,9 @@ export default function LaIride (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="laIride" className="center" >Vinos LaIride</h1>
+                <div className="center">
+                    <img className="logoBodegas"  src="../../logoLaIride.svg" alt="logoF" />
+                </div>
                 <div className="container">
                 <div className="table-container">
                 <table className="table table-dark table-striped w-70 m-auto">

@@ -26,7 +26,9 @@ export default function FincaIral (){
     return(
     <>
             <section className="seccionFincaIral">
-                <h1 id="fincaIral" className="center" >Vinos Finca Iral</h1>
+                <div className="logo-container center mb-5">
+                    <img className="logoBodegas" src="https://fincairal.com/wp-content/uploads/2024/01/finca-iral-logo-Recuperado.png " alt="logoIral" />
+                </div>
                 <div className="container">
                 <div className="table-container">
                 <table className="table table-dark table-striped w-70 m-auto">
