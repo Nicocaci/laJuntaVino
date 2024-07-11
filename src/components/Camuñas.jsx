@@ -1,52 +1,48 @@
-export default function Camuñas(){
-    return(
-        <section id='camuñas' className='seccionFincaIral'>
-        <h1 className='center'>Finca Camuñas</h1>
-        <div className='container'>
-        <div className='table-container'>
-        <table>
-            <tr>
-                <th>Nombre del Producto</th>
-                <th>Origen</th>
-                <th>Botella</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>Finca Camuñas Malbec</td>
-                <td>Valle de Tulum, San Juan</td>
-                <td>6 x 750 ml</td>
-                <td>$ 12.000</td>
-            </tr>
-            <tr>
-                <td>Finca Camuñas Cabernet Sauvignon</td>
-                <td>Valle de Tulum, San Juan</td>
-                <td>6 x 750 ml</td>
-                <td>$ 12.000</td>
-            </tr>
-            <tr>
-                <td>Finca Camuñas Pinot Grigio</td>
-                <td>Valle de Tulum, San Juan</td>
-                <td>6 x 750 ml</td>
-                <td>$ 12.000</td>
-            </tr>
-            <tr>
-                <td>Finca Camuñas Malbec Reserva</td>
-                <td>Valle de Tulum, San Juan</td>
-                <td>6 x 750 ml</td>
-                <td>$ 30.000</td>
-            </tr>
-            <tr>
-                <td>San Juan de mi Sangre By Paco Pugas Malbec</td>
-                <td>Valle de Tulum, San Juan</td>
-                <td>6 x 750 ml</td>
-                <td>$ 35.000</td>
-            </tr>
+import { useEffect, useState } from "react";
+import { obtenerVinosPorBodega, obtenerTodosLosVinos } from "../asyncmock";
 
-        </table>
-        </div>
-        <div className=''><img className='vino' src="https://acdn.mitiendanube.com/stores/087/677/products/fc_malbec_r1-edf886d59e0367172a16533377279734-640-0.png" alt="" />
-        </div>
-        </div>
-    </section>  
-    )
-}
+export default function Camuñas(){
+    const [vinos,setVinos] = useState ([]);
+    const [vinosBodegaCamuñas,setVinosBodegaCamuñas] = useState([]);
+        useEffect(() =>{
+            const CargarDatos = async () => {
+                const todosLosVinos = await obtenerTodosLosVinos();
+                setVinos(todosLosVinos);
+
+                const vinosCamuñas = await obtenerVinosPorBodega('Finca Camuñas');
+                setVinosBodegaCamuñas(vinosCamuñas);
+            };
+            CargarDatos();
+        });
+    
+    
+    return(
+        <section className="seccionFincaIral">
+            <h1 id="camuñas" className="center">Vinos Camuñas</h1>
+            <div className="container">
+            <div className="table-container">
+            <table className="table table-dark table-striped w-70 m-auto">
+                <thead className="text-black">
+                    <th>Nombre del Producto</th>
+                    <th>Origen</th>
+                    <th>Precio</th>
+                </thead>
+                <tbody>
+                    {vinosBodegaCamuñas.map(vino =>(
+                        <tr key={vino.id}>
+                            <td>{vino.nombre}</td>
+                            <td>{vino.origen}</td>
+                            <td>${vino.precio}</td>
+                        </tr>
+                    ))}
+                </tbody>
+            </table>
+            </div>
+            <div className='image-container'>
+                <img className='vino' src="https://acdn.mitiendanube.com/stores/087/677/products/fc_malbec_r1-edf886d59e0367172a16533377279734-640-0.png" alt="" />
+            </div>
+            </div>
+        </section>
+    );
+};
+

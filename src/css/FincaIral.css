@@ -1,14 +1,4 @@
-.container {
-    display: flex;
-    align-items: flex-start;
-}
-.table-container {
-    flex: 1;
-}
-.image-container {
-    flex: 1;
-    padding-left: 20px; /* Ajusta este valor según sea necesario */
-}
+
 table {
     border-collapse: collapse;
     width: 100%;
@@ -22,12 +12,6 @@ th {
     background-color: #f2f2f2;
 }
 .seccionFincaIral{
-    margin-top: 10%;
+    padding-top: 10%;
     background-color: bisque;
-}
-
-.image-container {
-    flex: 1;
-    margin-left: 10%;
-
 }

@@ -1,83 +1,59 @@
-export default function Gauchezco(){
+import { useEffect } from "react";
+import { useState } from "react";
+import { obtenerTodosLosVinos, obtenerVinosPorBodega } from "../asyncmock";
+
+
+
+
+
+export default function Gauchezco (){
+    const [vinos,setVinos] = useState([]);
+    const [vinosGauchezcoReserve,setVinosGauchezcoReserve] = useState([]);
+
+    useEffect(() => {
+        const cargarDatos = async () => {
+            const todosLosVinos = await obtenerTodosLosVinos();
+            setVinos(todosLosVinos);
+
+            const vinosGauchezco = await obtenerVinosPorBodega('Gauchezco');
+            setVinosGauchezcoReserve(vinosGauchezco);
+        };
+
+        cargarDatos();
+
+    },[]);
     return(
-        <section id='gauchezco' className='seccionFincaIral'>
-        <h1 className='center'>Gauchezco</h1>
-        <div className='container'>
-        <div className='table-container'>
-        <table>
-            <tr>
-                <th>Nombre del Producto</th>
-                <th>Origen</th>
-                <th>Botella</th>
-                <th>Precio</th>
-            </tr>
-            <tr>
-                <td>Gauchezco Estate Malbec</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$8.500</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Estate Cabernet Sauvignon</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$8.500</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Estate Malbec Rose</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$8.500</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Estate Syrah</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$8.500</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Reserva Malbec</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$11.900</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Reserva Cabernet Sauvignon</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$11.900</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Reserva Cabernet Franc</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$ 11.900</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Reserva Red Blend</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$11.900</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Plata Malbec</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$17.000</td>
-            </tr>
-            <tr>
-                <td>Gauchezco Plata Malbec- Cabernet Franc</td>
-                <td>Maipú, Mendoza</td>
-                <td>6 x 750 ml</td>
-                <td>$17.000</td>
-            </tr>
+    <>
+            <section className="seccionFincaIral">
+                <h1 id="gauchezco" className="center" >Gauchezco</h1>
+                <div className="container">
+                <div className="table-container">
+                <table className="table table-dark table-striped w-70 m-auto">
+                    <thead className="text-black">
+                        <th>Nombre del Producto</th>
+                        <th>Origen</th>
+                        <th>Botella</th>
+                        <th>Precio</th>
+                    </thead>
+                    <tbody>
+                        {vinosGauchezcoReserve.map(vino =>(
+                            <tr key={vino.id}>
+                                <td>{vino.nombre}</td>
+                                <td>{vino.origen}</td>
+                                <td>{vino.botella}</td>
+                                <td>${vino.precio}</td>
+                            </tr>
+                        ))}
+                    </tbody>
+                </table>
+                </div>
+                <div className='image-container'>+
+                    <img className='vino' src="https://gauchezco.com/cdn/shop/products/Gauchezco_Reserve_CF_large_2x.png?v=1596746774" alt="" />
+                </div>
+                </div>
+            </section>
+
+    </>);
+};
 
 
-        </table>
-        </div>
-        <div className=''><img className='vino' src="https://gauchezco.com/cdn/shop/products/Gauchezco_Reserve_CF_large_2x.png?v=1596746774" alt="" />
-        </div>
-        </div>
-    </section>  
-    )
-}
