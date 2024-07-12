@@ -68,7 +68,7 @@ export default function LaIride (){
             <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>
                 <div className="verDetalleContainer2">
                 <div className='d-flex justify-content-end'>
-                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs'>
+                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs close-button'>
                         <i class="bi bi-x"></i>
                     </button>
                 </div>

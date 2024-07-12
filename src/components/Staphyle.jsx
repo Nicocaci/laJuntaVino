@@ -69,8 +69,8 @@ export default function Staphyle (){
             <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>
                 <div className="verDetalleContainer2">
                 <div className='d-flex justify-content-end'>
-                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs'>
-                        <i class="bi bi-x"></i>
+                    <button  onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs close-button'>
+                        <i class="bi bi-x "></i>
                     </button>
                 </div>
                     <img className="foto-detalle" src={verDetalle.url2} alt="asdasd" />

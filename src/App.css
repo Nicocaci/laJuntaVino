@@ -51,7 +51,7 @@ a{
   height: 550px;
   border-radius: 10px;
   box-shadow: 0 4px 10px 4px grey;
-  border: 5px solid grey;
+  border: 5px solid black;
   text-align: center;
   background-color: white;
   transition: transform 0.2s;
@@ -122,4 +122,17 @@ a{
   width: 50%;
   height: 8%;
   font-size: smaller !important ;
+}
+
+.close-button{
+  font-size: 24px; /* Ajusta el tamaño según tus necesidades */
+  color: black; /* Cambia el color a negro */
+  background: none; /* Elimina el fondo si es necesario */
+  border: 2px solid black; /* Elimina el borde si es necesario */
+  cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+.close-button:hover {
+  background-color: black;
+  color: white;
 }
