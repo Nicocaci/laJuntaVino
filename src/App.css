@@ -38,3 +38,21 @@ a{
 .logoBodegas{
   width: 15%;
 }
+
+.cardConteiner{
+  width: 70%;
+  height: 40%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px 4px grey;
+  border: 5px solid grey;
+  text-align: center;
+}
+
+.img-card{
+  height: 350px;
+}
+
+
+.img-detalle{
+  width: 700px;
+}
