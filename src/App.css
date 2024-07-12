@@ -21,9 +21,16 @@ a{
 
 /* diseño fotos vinos al lado de las tablas  */
 
-.container {
-  display: flex;
-  align-items: center;
+.contenedorCards{
+  display:grid;
+  grid-template-columns: repeat(3,1fr);
+  margin: 0 auto;
+  max-width: 1000px;
+  gap: 20px;
+}
+
+.card1{
+  height: 500px;
 }
 .table-container {
   flex: 1;
@@ -40,19 +47,79 @@ a{
 }
 
 .cardConteiner{
-  width: 70%;
-  height: 40%;
+  width:70%;
+  height: 550px;
   border-radius: 10px;
   box-shadow: 0 4px 10px 4px grey;
   border: 5px solid grey;
   text-align: center;
+  background-color: white;
+  transition: transform 0.2s;
+}
+.cardConteiner:hover{
+  transform: scale(1.2);
 }
 
 .img-card{
-  height: 350px;
+  height: 300px;
+  max-width: 100%;
+  
 }
+
 
 
 .img-detalle{
   width: 700px;
+}
+
+.verDetalleContainer{
+  height: 100vh;
+  width: 100%; 
+  position: fixed; 
+  margin: auto;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+}
+.verDetalleContainer2{
+  height: 90%;
+  width: 40%;
+  background-color: white;
+
+}
+
+.foto-detalle{
+  height: 100%;
+  width: 100%;
+  margin-bottom: 200px;
+}
+
+
+.titulo-vino{
+  font-family: "Bona Nova SC", serif;
+  font-size:xx-large;
+  margin-top: 5%;
+  height: 80px;
+}
+
+.titulo-origen{
+  font-family: "Playwrite DK Loopet", cursive;
+  font-size: medium;
+  margin-bottom: 5%;
+  
+}
+
+.año-vinos{
+  font-family: "Playwrite HR", cursive;
+  font-size: smaller;
+}
+
+.boton-detalle{
+  width: 50%;
+  height: 8%;
+  font-size: smaller !important ;
 }

@@ -10,6 +10,7 @@ import { obtenerTodosLosVinos, obtenerVinosPorBodega } from "../asyncmock";
 export default function Xumek (){
     const [vinos,setVinos] = useState([]);
     const [vinosBodegaXumek,setVinosBodegaXumek] = useState([]);
+    const [verDetalle,setVerDetalle] = useState ({detalle:false, url2:null});
 
     useEffect(() => {
         const cargarDatos = async () => {
@@ -23,10 +24,13 @@ export default function Xumek (){
         cargarDatos();
 
     },[]);
+    
+    const vinoBodegaXumekFoto = vinosBodegaXumek.filter(vino => vino.url);
+    
     return(
     <>
             <section className="seccionFincaIral">
-                <div className="center">
+                <div id="xumek" className="center">
                     <img className="logoBodegas" src="https://xumek.com.ar/wp-content/uploads/2020/06/logo-200px.png" alt="logoX" />
                 </div>
                 <div className="container">
@@ -48,11 +52,28 @@ export default function Xumek (){
                     </tbody>
                 </table>
                 </div>
-                <div className='image-container'>
-                    <img className='vino-xumek' src="https://acdn.mitiendanube.com/stores/087/677/products/xumek-syrah_ok-b30affe6d7c93cae3916964513735602-1024-1024.png" alt="" />
                 </div>
+                <div className="row container mt-5 m-auto">
+                    {vinoBodegaXumekFoto.map(vino =>(
+                        <div key={vino.id} className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre}/>}
+                            <h4>{vino.nombre}</h4>
+                            <h3>{vino.origen}</h3>  
+                            <button onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                        </div>
+                    ))}
                 </div>
             </section>
+            <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>
+                <div className="verDetalleContainer2">
+                <div className='d-flex justify-content-end'>
+                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs'>
+                        <i class="bi bi-x"></i>
+                    </button>
+                </div>
+                    <img className="foto-detalle" src={verDetalle.url2} alt="asdasd" />
+                </div>
+            </div>
 
     </>);
 };

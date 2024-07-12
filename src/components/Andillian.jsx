@@ -27,7 +27,7 @@ export default function Andillian (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div className="center">
+                <div id="andillian" className="center">
                     <img className="logoAndillian" src="logoAndillian.jpg" alt="" />
                 </div>
                 <div className="container">

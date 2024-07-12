@@ -27,7 +27,7 @@ export default function Primogenito (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div className="center">
+                <div id="primogenito" className="center">
                     <img className=' logoBodegas' src="../../logoprimogenito.svg" alt="" />
                 </div>
                 <div className="container">

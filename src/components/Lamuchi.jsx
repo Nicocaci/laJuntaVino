@@ -27,7 +27,7 @@ export default function Lamuchi (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div className="center">
+                <div id="lamuchi" className="center">
                     <img className="logoBodegas" src="https://i0.wp.com/lamuchi.com/wp-content/uploads/2023/01/LaMuchi-logo.png?fit=402%2C114&ssl=1" alt="logoL" />
                 </div>
                 <div className="container">

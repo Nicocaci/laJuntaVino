@@ -18,7 +18,7 @@ export default function Camuñas(){
     
     return(
         <section className="seccionFincaIral">
-            <div className="center">
+            <div id="camuñas" className="center">
                 <img className="logoBodegas" src="../../logoCamuñas.svg" alt="logoC" />
             </div>
             <div className="container">
