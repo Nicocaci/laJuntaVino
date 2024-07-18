@@ -30,7 +30,7 @@ export default function Xumek (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div id="xumek" className="center">
+                <div id="xumek" className="center mb-5">
                     <img className="logoBodegas" src="https://xumek.com.ar/wp-content/uploads/2020/06/logo-200px.png" alt="logoX" />
                 </div>
                 <div className="container">

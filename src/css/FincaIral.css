@@ -17,8 +17,11 @@ th {
     background-color: bisque;
 }
 
-/* .logo-container{
-    
-} */
+.titulo-iral{
+    font-family: "Bona Nova SC", serif;
+    font-size:x-large;
+    margin-top: 5%;
+    height: 100px;
+}
 
 

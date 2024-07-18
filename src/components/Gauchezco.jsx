@@ -12,7 +12,6 @@ export default function Gauchezco() {
     const [verDetalle, setVerDetalle] = useState({detalle:false, url2:null});
 
 
-    // const [verDetalle,setVerDetalle] = useState({detalle:true,url:null});
     const handleButtonClick = () => {
         setMostrarImagen(!mostrarImagen);
     }
@@ -69,7 +68,7 @@ export default function Gauchezco() {
                             <button className="btn btn-dark boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
                         </div>
                     ))}
-                </div>
+                    </div>
                 </div>
             </section>
             <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>

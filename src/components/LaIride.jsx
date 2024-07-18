@@ -29,7 +29,7 @@ export default function LaIride (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div id="laIride" className="center">
+                <div id="laIride" className="center mb-5">
                     <img className="logoBodegas"  src="../../logoLaIride.svg" alt="logoF" />
                 </div>
                 <div className="container">

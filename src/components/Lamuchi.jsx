@@ -11,6 +11,7 @@ import '../css/Lamuchi.css'
 export default function Lamuchi (){
     const [vinos,setVinos] = useState([]);
     const [vinosBodegaLamuchi,setVinosBodegaLamuchi] = useState([]);
+    const [verDetalle,setVerDetalle] = useState({detalle:false,url2:null});
 
     useEffect(() => {
         const cargarDatos = async () => {
@@ -24,10 +25,13 @@ export default function Lamuchi (){
         cargarDatos();
 
     },[]);
+
+    const vinosBodegaLamuchiFoto = vinosBodegaLamuchi.filter(vino => vino.url);
+
     return(
     <>
             <section className="seccionFincaIral">
-                <div id="lamuchi" className="center">
+                <div id="lamuchi" className="center mb-5">
                     <img className="logoBodegas" src="https://i0.wp.com/lamuchi.com/wp-content/uploads/2023/01/LaMuchi-logo.png?fit=402%2C114&ssl=1" alt="logoL" />
                 </div>
                 <div className="container">
@@ -49,8 +53,25 @@ export default function Lamuchi (){
                     </tbody>
                 </table>
                 </div>
-                <div className='image-container'>
-                    <img className='vino-lamuchi' src="https://www.lovemarktrading.com/wp-content/uploads/2020/10/lamuchi_malbec.png" alt="" />
+                <div className="row container mt-5 m-auto">
+                    {vinosBodegaLamuchiFoto.map(vino =>
+                        <div className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre}/>}
+                            <h4 className="titulo-lamuchi">{vino.nombre}</h4>
+                            <h5 className="titulo-origen">{vino.origen}</h5>
+                            <button className="btn btn-dark boton-detalle mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                        </div>
+                    )}
+                </div>
+                <div className={verDetalle.detalle ? 'verDetalleContainer' : 'd-none'}>
+                <div className="verDetalleContainer2">
+                    <div className='d-flex justify-content-end'>
+                        <button onClick={() => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs close-button'>
+                            <i className="bi bi-x"></i>
+                        </button>
+                    </div>
+                    <img className="foto-detalle" src={verDetalle.url2} alt="Detalle" />
+                </div>
                 </div>
                 </div>
 

@@ -29,6 +29,9 @@ export default function Aicardi() {
     const vinosFamiliaAicardiPUR = vinosFamiliaAicardi.filter(vino => vino.id >= 16 && vino.id <= 21);
     const vinosFamiliaAicardiST = vinosFamiliaAicardi.filter(vino => vino.id >= 22 && vino.id <= 23);
     const vinosFamiliaAicardiBF = vinosFamiliaAicardi.filter(vino => vino.id >= 24 && vino.id <= 25);
+    const vinosFamiliaAicardiPar= vinosFamiliaAicardi.filter(vino => vino.partida === 'parcela unica reserva' )
+    const vinosFamiliaAicardiSer = vinosFamiliaAicardi.filter(vino => vino.partida === 'serie terrior')
+    const vinosFamiliaAicardiBar = vinosFamiliaAicardi.filter(vino => vino.partida === 'barrel fermented')
     const vinosFamiliaAicardiFoto = vinosFamiliaAicardi.filter(vino => vino.url);
 
 
@@ -50,7 +53,7 @@ export default function Aicardi() {
                                 <th>Precio</th>
                             </thead>
                             <tbody>
-                                <h5 className="text-black">PARCELA UNICA RESERVA</h5>
+                                {/* <h5 className="text-black">PARCELA UNICA RESERVA</h5>
                                 {vinosFamiliaAicardiPUR.map(vino => (
                                     <tr key={vino.id}>
                                         <td>{vino.nombre}</td>
@@ -58,8 +61,17 @@ export default function Aicardi() {
                                         <td>{vino.origen}</td>
                                         <td>${vino.precio}</td>
                                     </tr>
-                                ))}
-                                <h5 className="text-black">SERIE TERRIOR</h5>
+                                ))} */}
+                                <h5 className="text-black">PARCELA UNICA RESERVA</h5>
+                                {vinosFamiliaAicardiPar.map(vino =>
+                                    <tr key={vino.id}>
+                                        <td>{vino.nombre}</td>
+                                        <td>{vino.año}</td>
+                                        <td>{vino.origen}</td>
+                                        <td>{vino.precio}</td>
+                                    </tr>
+                                )}
+                                {/* <h5 className="text-black">SERIE TERRIOR</h5>
                                 {vinosFamiliaAicardiST.map(vino => (
                                     <tr key={vino.id}>
                                         <td>{vino.nombre}</td>
@@ -67,22 +79,57 @@ export default function Aicardi() {
                                         <td>{vino.origen}</td>
                                         <td>${vino.precio}</td>
                                     </tr>
-                                ))}
-                                <h5 className="text-black">BARREL FERMENTED</h5>
-                                {vinosFamiliaAicardiBF.map(vino => (
+                                ))} */}
+                                <h5 className="text-black">SERIE TERRIOR</h5>
+                                {vinosFamiliaAicardiSer.map(vino =>
                                     <tr key={vino.id}>
                                         <td>{vino.nombre}</td>
                                         <td>{vino.año}</td>
                                         <td>{vino.origen}</td>
-                                        <td>${vino.precio}</td>
+                                        <td>{vino.precio}</td>
                                     </tr>
-                                ))}
+                                )}
+                                <h5 className="text-black">BARREL FERMENTED</h5>
+                                {vinosFamiliaAicardiBar.map(vino =>
+                                    <tr key={vino.id}>
+                                        <td>{vino.nombre}</td>
+                                        <td>{vino.año}</td>
+                                        <td>{vino.origen}</td>
+                                        <td>{vino.precio}</td>
+                                    </tr>
+                                )}
+
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div className="row container mt-5 m-auto">
-                    {vinosFamiliaAicardiFoto.map(vino => (
+                    <h5 className="text-black center">PARCELA UNICA RESERVA</h5>
+                    {vinosFamiliaAicardiPar.map(vino => (
+                        <div className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre} />}
+                            <h2 className="titulo-vino">{vino.nombre}</h2>
+                            <h3 className="titulo-origen">{vino.origen}</h3>
+                            <h4 className="año-vinos">Año:{vino.año}</h4>
+                            <button className="btn btn-dark boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                        </div>
+                    ))}
+                </div>
+                <div className="row container mt-5 m-auto">
+                    <h5 className="text-black center">SERIE TERRIOR</h5>
+                    {vinosFamiliaAicardiSer.map(vino => (
+                        <div className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre} />}
+                            <h2 className="titulo-vino">{vino.nombre}</h2>
+                            <h3 className="titulo-origen">{vino.origen}</h3>
+                            <h4 className="año-vinos">Año:{vino.año}</h4>
+                            <button className="btn btn-dark boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                        </div>
+                    ))}
+                </div>
+                <div className="row container mt-5 m-auto">
+                    <h5 className="text-black center">BARREL FERMENTED</h5>
+                    {vinosFamiliaAicardiBar.map(vino => (
                         <div className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre} />}
                             <h2 className="titulo-vino">{vino.nombre}</h2>

@@ -29,7 +29,7 @@ export default function Staphyle (){
     return(
     <>
             <section className="seccionFincaIral">
-                <div id="staphyle" className="center">
+                <div id="staphyle" className="center mb-5">
                     <img className="logoBodegas" src="https://www.staphyle.com/img/staphyle-logo.png" alt="logoS" />
                 </div>
                 <div className="container">
