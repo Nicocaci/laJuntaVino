@@ -4,3 +4,46 @@
     margin-top: 5%;
     height: 100px;
 }
+
+
+
+/* MEDIA QUERIES */
+@media(max-width:1024px){
+    .table{
+        width: 80%;
+    }
+    .titulo-bodega{
+        font-size: 13px;
+    }
+    .titulos-estilo{
+        font-size:smaller;
+    }
+    .descripcion{
+        font-size: small;
+    }
+    .cardQueries{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        
+    }
+    .cardConteinerC{
+        width: 50%;
+        height: 420px;
+    }
+    .img-card{
+        height: 240px;
+    }
+    .titulo-camuñas{
+        font-size: 17px;
+        margin-top: 15%;
+        height: 70px;
+    }
+    .titulo-origen{
+        font-size:10px;
+    }
+    .boton-detalleC{
+        height: 7%;
+    }
+    
+}

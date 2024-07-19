@@ -2,3 +2,54 @@
 height: 300px;
 width: 100%;
 }
+
+
+
+/* MEDIA QUERIES */
+@media(max-width:1024px){
+    .table{
+        width: 80%;
+    }
+    .titulo-bodega{
+        font-size: 13px;
+    }
+    .titulos-estilo{
+        font-size:smaller;
+    }
+    .descripcion{
+        font-size: small;
+    }
+    .cardQueries{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        
+    }
+    .cardConteinerA{
+        width: 50%;
+        height: 450px;
+    }
+    .img-cardA{
+        height: 200px !important;
+    }
+    .titulo-vino{
+        font-size: 17px;
+        margin-top: 15%;
+        height: 70px;
+    }
+    .titulo-origen{
+        font-size:10px;
+    }
+    .año-vinos{
+        font-size: 10px;
+    }
+    .bodegas{
+        display: none;
+    }
+    .boton-detalleA{
+        height: 6% ;
+    }
+    .titulo-detalleA{
+        font-size:9px ;
+    }
+}

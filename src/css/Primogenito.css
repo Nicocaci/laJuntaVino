@@ -8,3 +8,46 @@
     margin-top: 5%;
     height: 100px;
 }
+
+
+
+
+
+/* MEDIA QUERIESSSS  */
+
+@media(max-width:1024px){
+    .table{
+        width: 80%;
+    }
+    .titulos-estilo{
+        font-size:smaller;
+    }
+    .descripcion{
+        font-size: small;
+    }
+    .cardQueries{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        justify-items: center;
+        
+    }
+    .cardConteinerP{
+        width: 50%;
+        height: 400px;
+    }
+    .img-cardP{
+        height: 200px !important;
+    }
+    .titulo-primogenito{
+        font-size: 17px;
+        margin-top: 15%;
+        height: 80px;
+    }
+    .titulo-origen{
+        font-size:10px;
+    }
+    .boton-detalleP{
+        height: 8%;
+    }
+
+}

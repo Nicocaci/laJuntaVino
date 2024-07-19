@@ -40,7 +40,7 @@ export default function Gauchezco() {
                 </div>
                 <div className="container">
                     <div className="table-container">
-                        <table className="table table-dark table-striped w-70 m-auto">
+                        <table className="table table-dark table-striped w-70 m-auto titulos-estilo">
                             <thead className="text-black">
                                 <th>Nombre del Producto</th>
                                 <th>Origen</th>
@@ -50,22 +50,22 @@ export default function Gauchezco() {
                             <tbody>
                                 {vinosGauchezcoReserve.map(vino => (
                                     <tr key={vino.id}>
-                                        <td>{vino.nombre}</td>
-                                        <td>{vino.origen}</td>
-                                        <td>{vino.botella}</td>
-                                        <td>${vino.precio}</td>
+                                        <td className="descripcion">{vino.nombre}</td>
+                                        <td className="descripcion">{vino.origen}</td>
+                                        <td className="descripcion">{vino.botella}</td>
+                                        <td className="descripcion">${vino.precio}</td>
                                     </tr>
                                 ))}
                             </tbody>
                         </table>
                     </div>
-                    <div className="row container mt-5 m-auto">
+                    <div className="row container mt-5 m-auto cardQueries">
                     {vinosGauchezcoReserveFoto.map(vino =>(
-                        <div key={vino.id} className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
-                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre}/>}
+                        <div key={vino.id} className='col-md-3 cardConteiner cardConteinerG pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card img-cardG" src={vino.url} alt={vino.nombre}/>}
                             <h4 className="titulo-gauchezco">{vino.nombre}</h4>
                             <h3 className="titulo-origen">{vino.origen}</h3>
-                            <button className="btn btn-dark boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                            <button className="btn btn-dark boton-detalleG boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
                         </div>
                     ))}
                     </div>

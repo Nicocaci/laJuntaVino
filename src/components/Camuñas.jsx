@@ -26,7 +26,7 @@ export default function Camuñas(){
             </div>
             <div className="container">
                 <div className="table-container">
-                    <table className="table table-dark table-striped w-70 m-auto">
+                    <table className="table table-dark table-striped w-70 m-auto titulos-estilos">
                         <thead className="text-black">
                             <tr>
                                 <th>Nombre del Producto</th>
@@ -37,21 +37,21 @@ export default function Camuñas(){
                         <tbody>
                             {vinosBodegaCamuñas.map(vino => (
                                 <tr key={vino.id}>
-                                    <td>{vino.nombre}</td>
-                                    <td>{vino.origen}</td>
-                                    <td>${vino.precio}</td>
+                                    <td className="descripcion">{vino.nombre}</td>
+                                    <td className="descripcion">{vino.origen}</td>
+                                    <td className="descripcion">${vino.precio}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </div>
-                <div className="row container mt-5 m-auto">
+                <div className="row container mt-5 m-auto cardQueries">
                     {vinosBodegaCamuñasFoto.map(vino => (
-                        <div key={vino.id} className='col-md-3 cardConteiner pb-5 ms-5 mb-3 mt-3'>
+                        <div key={vino.id} className='col-md-3 cardConteiner cardConteinerC  pb-5 ms-5 mb-3 mt-3 '>
                             {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre} />}
                             <h4 className="titulo-gauchezco">{vino.nombre}</h4>
                             <h3 className="titulo-origen">{vino.origen}</h3>
-                            <button className="btn btn-dark boton-detalle mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}>Ver Detalle..</button>
+                            <button className="btn btn-dark boton-detalleC boton-detalle mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
                         </div>
                     ))}
                 </div>
