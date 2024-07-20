@@ -57,7 +57,7 @@ export default function Aicardi() {
                                         <td className="descripcion descripcionC">{vino.nombre}</td>
                                         <td className="descripcion descripcionC">{vino.año}</td>
                                         <td className="descripcion descripcionC">{vino.origen}</td>
-                                        <td className="descripcion descripcionC">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">${vino.precio}</td>
                                     </tr>
                                 )}
                                 <h5 className="text-black titulo-bodega">SERIE TERRIOR</h5>
@@ -66,7 +66,7 @@ export default function Aicardi() {
                                         <td className="descripcion descripcionC">{vino.nombre}</td>
                                         <td className="descripcion descripcionC">{vino.año}</td>
                                         <td className="descripcion descripcionC">{vino.origen}</td>
-                                        <td className="descripcion descripcionC">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">${vino.precio}</td>
                                     </tr>
                                 )}
                                 <h5 className="text-black titulo-bodega">BARREL FERMENTED</h5>
@@ -75,7 +75,7 @@ export default function Aicardi() {
                                         <td className="descripcion descripcionC">{vino.nombre}</td>
                                         <td className="descripcion descripcionC">{vino.año}</td>
                                         <td className="descripcion descripcionC">{vino.origen}</td>
-                                        <td className="descripcion descripcionC">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">${vino.precio}</td>
                                     </tr>
                                 )}
 
@@ -83,7 +83,7 @@ export default function Aicardi() {
                         </table>
                     </div>
                 </div>
-                <div className="row container mt-5  cardQueries cardQueriesCe ">
+                <div className="container row m-auto mt-5  cardQueries cardQueriesA cardQueriesCe ">
                     <h5 className="text-black center bodegas">PARCELA UNICA RESERVA</h5>
                     {vinosFamiliaAicardiPar.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
@@ -95,7 +95,7 @@ export default function Aicardi() {
                         </div>
                     ))}
                 </div>
-                <div className="row container mt-5  cardQueries cardQueriesCe ">
+                <div className="row container mt-5  m-auto cardQueries cardQueriesCe ">
                     <h5 className="text-black center bodegas">SERIE TERRIOR</h5>
                     {vinosFamiliaAicardiSer.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
@@ -107,7 +107,7 @@ export default function Aicardi() {
                         </div>
                     ))}
                 </div>
-                <div className="row container mt-5   cardQueries cardQueriesCe">
+                <div className="row container mt-5 m-auto   cardQueries cardQueriesCe">
                     <h5 className="text-black center bodegas">BARREL FERMENTED</h5>
                     {vinosFamiliaAicardiBar.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>

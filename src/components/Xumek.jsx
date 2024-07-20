@@ -53,7 +53,7 @@ export default function Xumek (){
                 </table>
                 </div>
                 </div>
-                <div className="row container mt-5  cardQueries cardQueriesCe">
+                <div className="row container mt-5 m-auto  cardQueries cardQueriesCe">
                     {vinoBodegaXumekFoto.map(vino =>(
                         <div key={vino.id} className='col-md-3 cardConteiner cardConteinerX pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre}/>}
