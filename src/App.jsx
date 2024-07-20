@@ -14,6 +14,7 @@ import Camuñas from './components/Camuñas';
 import Xumek from './components/Xumek';
 import Lamuchi from './components/Lamuchi';
 import Andillian from './components/Andillian';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -32,6 +33,7 @@ function App() {
     <Xumek></Xumek>
     <Lamuchi></Lamuchi>
     <Andillian></Andillian>
+    <Footer></Footer>
     </main>
     </>
   )
