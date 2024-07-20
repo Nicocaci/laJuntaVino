@@ -34,7 +34,7 @@ export default function Staphyle (){
                 </div>
                 <div className="container">
                 <div className="table-container">
-                <table className="table table-dark table-striped w-70 m-auto titulos-estilo">
+                <table className="table table-dark table-striped w-70 m-auto titulos-estilo titulos-estiloC">
                     <thead className="text-black">
                         <th>Nombre del Producto</th>
                         <th>Origen</th>
@@ -44,22 +44,22 @@ export default function Staphyle (){
                     <tbody>
                         {vinosBodegaStaphyle.map(vino =>(
                             <tr key={vino.id}>
-                                <td className="descripcion">{vino.nombre}</td>
-                                <td className="descripcion">{vino.origen}</td>
-                                <td className="descripcion">{vino.botella}</td>
-                                <td className="descripcion">${vino.precio}</td>
+                                <td className="descripcion descripcionC">{vino.nombre}</td>
+                                <td className="descripcion descripcionC">{vino.origen}</td>
+                                <td className="descripcion descripcionC">{vino.botella}</td>
+                                <td className="descripcion descripcionC">${vino.precio}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
                 </div>
-                <div className="row container mt-5 m-auto cardQueries">
+                <div className="row container mt-5  cardQueries cardQueriesCe">
                     {vinosBodegaStaphyleFoto.map(vino =>(
-                        <div key={vino.id} className='col-md-3 cardConteiner cardConteinerS pb-5 ms-5 mb-3 mt-3'>
+                        <div key={vino.id} className='col-md-3 cardConteiner cardConteinerM cardConteinerS pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card img-cardS" src={vino.url} alt={vino.nombre}/>}
                             <h4 className="titulo-staphyle">{vino.nombre}</h4>
                             <h3 className="titulo-origen">{vino.origen}</h3>
-                            <button className="btn btn-dark boton-detalleS boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
+                            <button className="btn btn-dark boton-detalleS boton-detalle boton-detalleM mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
                             
                         </div>
                     ))}

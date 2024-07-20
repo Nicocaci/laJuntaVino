@@ -45,3 +45,18 @@
     }
     
 }
+
+
+@media (max-width:425){
+    .cardQueriesCe{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    .titulos-estiloC{
+        font-size:10px;
+    }
+
+    .descripcionC{
+        font-size: 10px;
+    }
+    
+}

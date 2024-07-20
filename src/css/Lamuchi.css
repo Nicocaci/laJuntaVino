@@ -47,3 +47,23 @@
     }
     
 }
+
+
+@media (max-width:425px){
+    .cardQueriesCe{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    .titulos-estiloC{
+        font-size:10px;
+    }
+    .boton-detalleC{
+        height: 9%;
+    }
+
+    .descripcionC{
+        font-size: 10px;
+    }
+    .cardConteinerCe{
+        height: 360px !important;
+    }
+}

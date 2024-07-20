@@ -59,7 +59,7 @@ export default function Primogenito (){
                             {vino.url && <img className="img-card img-cardP" src={vino.url} alt={vino.nombre}/>}
                             <h4 className="titulo-primogenito">{vino.nombre}</h4>
                             <h5 className="titulo-origen">{vino.origen}</h5>
-                            <button className="btn btn-dark boton-detalleP boton-detalle mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
+                            <button className="btn btn-dark boton-detalleP boton-detalle boton-detalleM mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
                         </div>
                     )}
                 </div>

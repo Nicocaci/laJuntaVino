@@ -83,7 +83,7 @@ export default function Aicardi() {
                         </table>
                     </div>
                 </div>
-                <div className="row container mt-5 m-auto cardQueries cardQueriesCe ">
+                <div className="row container mt-5  cardQueries cardQueriesCe ">
                     <h5 className="text-black center bodegas">PARCELA UNICA RESERVA</h5>
                     {vinosFamiliaAicardiPar.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
@@ -95,7 +95,7 @@ export default function Aicardi() {
                         </div>
                     ))}
                 </div>
-                <div className="row container mt-5 m-auto cardQueries ">
+                <div className="row container mt-5  cardQueries cardQueriesCe ">
                     <h5 className="text-black center bodegas">SERIE TERRIOR</h5>
                     {vinosFamiliaAicardiSer.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
@@ -107,7 +107,7 @@ export default function Aicardi() {
                         </div>
                     ))}
                 </div>
-                <div className="row container mt-5 m-auto  cardQueries">
+                <div className="row container mt-5   cardQueries cardQueriesCe">
                     <h5 className="text-black center bodegas">BARREL FERMENTED</h5>
                     {vinosFamiliaAicardiBar.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
