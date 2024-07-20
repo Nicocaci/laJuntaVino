@@ -36,7 +36,7 @@ export default function Primogenito (){
                 </div>
                 <div className="container">
                 <div className="table-container">   
-                <table className="table table-dark table-striped w-70 m-auto titulos-estilo">
+                <table className="table table-dark table-striped w-70 m-auto titulos-estilo titulos-estiloC">
                     <thead className="text-black">
                         <th>Nombre del Producto</th>
                         <th>Origen</th>
@@ -45,15 +45,15 @@ export default function Primogenito (){
                     <tbody>
                         {vinosBodegaPrimogenito.map(vino =>(
                             <tr key={vino.id}>
-                                <td className="descripcion">{vino.nombre}</td>
-                                <td className="descripcion">{vino.origen}</td>
-                                <td className="descripcion">${vino.precio}</td>
+                                <td className="descripcion descripcionC">{vino.nombre}</td>
+                                <td className="descripcion descripcionC">{vino.origen}</td>
+                                <td className="descripcion descripcionC">${vino.precio}</td>
                             </tr>
                         ))}
                     </tbody>
                 </table>
                 </div>
-                <div className="row container mt-5 m-auto cardQueries">
+                <div className="row container mt-5  cardQueries cardQueriesCe">
                     {vinosBodegaPrimogenitoFoto.map(vino =>
                         <div className='col-md-3 cardConteiner cardConteinerP pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card img-cardP" src={vino.url} alt={vino.nombre}/>}

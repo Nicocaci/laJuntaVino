@@ -34,8 +34,8 @@ export default function FincaIral (){
                     <img className="logoBodegas" src="https://fincairal.com/wp-content/uploads/2024/01/finca-iral-logo-Recuperado.png " alt="logoIral" />
                 </div>
                 <div className="container">
-                <div className="table-container tableM tableC">
-                <table className="table  table-dark table-striped w-70 m-auto">
+                <div className="table-container tableM tableC tableCe ">
+                <table className="table   table-dark table-striped w-70 m-auto">
                     <thead className="text-black titulos-estilo titulos-estiloC">
                         <th>Nombre del Producto</th>
                         <th>Origen</th>
@@ -52,7 +52,7 @@ export default function FincaIral (){
                     </tbody>
                 </table>
                 </div>
-                <div className="row container mt-5  cardQueries cardQueriesM cardQueriesC ">
+                <div className="row container mt-5  cardQueries cardQueriesCe ">
                     {vinosFincaIralFoto.map(vino =>
                         <div className='col-md-3 cardConteiner cardConteinerF cardConteinerM cardConteinerC pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card img-cardF img-cardM" src={vino.url} alt={vino.nombre}/>}

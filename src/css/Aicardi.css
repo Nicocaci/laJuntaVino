@@ -6,7 +6,7 @@ width: 100%;
 
 
 /* MEDIA QUERIES */
-@media(max-width:1024px){
+@media(max-width:1000px){
     .table{
         width: 80%;
     }
@@ -51,5 +51,18 @@ width: 100%;
     }
     .titulo-detalleA{
         font-size:9px ;
+    }
+}
+
+@media (max-width:425px){
+    .cardQueriesCe{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
+    .titulos-estiloC{
+        font-size:10px;
+    }
+
+    .descripcionC{
+        font-size: 10px;
     }
 }

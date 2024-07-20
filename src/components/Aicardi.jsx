@@ -44,7 +44,7 @@ export default function Aicardi() {
                 <div className="container">
                     <div className="table-container">
                         <table className="table table-dark table-striped w-70 m-auto">
-                            <thead className="text-black titulos-estilo">
+                            <thead className="text-black titulos-estilo titulos-estiloC">
                                 <th>Nombre del Producto</th>
                                 <th>Año</th>
                                 <th>Origen</th>
@@ -54,28 +54,28 @@ export default function Aicardi() {
                                 <h5 className="text-black titulo-bodega">PARCELA UNICA RESERVA</h5>
                                 {vinosFamiliaAicardiPar.map(vino =>
                                     <tr key={vino.id}>
-                                        <td className="descripcion">{vino.nombre}</td>
-                                        <td className="descripcion">{vino.año}</td>
-                                        <td className="descripcion">{vino.origen}</td>
-                                        <td className="descripcion">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">{vino.nombre}</td>
+                                        <td className="descripcion descripcionC">{vino.año}</td>
+                                        <td className="descripcion descripcionC">{vino.origen}</td>
+                                        <td className="descripcion descripcionC">{vino.precio}</td>
                                     </tr>
                                 )}
                                 <h5 className="text-black titulo-bodega">SERIE TERRIOR</h5>
                                 {vinosFamiliaAicardiSer.map(vino =>
                                     <tr key={vino.id}>
-                                        <td className="descripcion">{vino.nombre}</td>
-                                        <td className="descripcion">{vino.año}</td>
-                                        <td className="descripcion">{vino.origen}</td>
-                                        <td className="descripcion">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">{vino.nombre}</td>
+                                        <td className="descripcion descripcionC">{vino.año}</td>
+                                        <td className="descripcion descripcionC">{vino.origen}</td>
+                                        <td className="descripcion descripcionC">{vino.precio}</td>
                                     </tr>
                                 )}
                                 <h5 className="text-black titulo-bodega">BARREL FERMENTED</h5>
                                 {vinosFamiliaAicardiBar.map(vino =>
                                     <tr key={vino.id}>
-                                        <td className="descripcion">{vino.nombre}</td>
-                                        <td className="descripcion">{vino.año}</td>
-                                        <td className="descripcion">{vino.origen}</td>
-                                        <td className="descripcion">{vino.precio}</td>
+                                        <td className="descripcion descripcionC">{vino.nombre}</td>
+                                        <td className="descripcion descripcionC">{vino.año}</td>
+                                        <td className="descripcion descripcionC">{vino.origen}</td>
+                                        <td className="descripcion descripcionC">{vino.precio}</td>
                                     </tr>
                                 )}
 
@@ -83,7 +83,7 @@ export default function Aicardi() {
                         </table>
                     </div>
                 </div>
-                <div className="row container mt-5 m-auto cardQueries ">
+                <div className="row container mt-5 m-auto cardQueries cardQueriesCe ">
                     <h5 className="text-black center bodegas">PARCELA UNICA RESERVA</h5>
                     {vinosFamiliaAicardiPar.map(vino => (
                         <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
