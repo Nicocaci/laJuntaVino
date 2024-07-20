@@ -88,14 +88,20 @@ th {
 
 
 @media (max-width:600px){
-    .cardQueriesC{
-        grid-template-columns: repeat(1,1fr) !important;
+    .cardConteinerC{
+        width: 200px !important;
+
     }
     .titulos-estiloC{
         font-size:10px !important;
     }
+
     .descripcionC{
         font-size: 10px !important;
+    }
+    .container{
+        margin-left: 1% ;
+
     }
 }
 

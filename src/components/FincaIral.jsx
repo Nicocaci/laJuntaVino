@@ -52,9 +52,9 @@ export default function FincaIral (){
                     </tbody>
                 </table>
                 </div>
-                <div className="row container mt-5 m-auto  cardQueries cardQueriesM cardQueriesC ">
+                <div className="row container mt-5  cardQueries cardQueriesM cardQueriesC ">
                     {vinosFincaIralFoto.map(vino =>
-                        <div className='col-md-3 cardConteiner cardConteinerF cardConteinerM pb-5 ms-5 mb-3 mt-3'>
+                        <div className='col-md-3 cardConteiner cardConteinerF cardConteinerM cardConteinerC pb-5 ms-5 mb-3 mt-3'>
                             {vino.url && <img className="img-card img-cardF img-cardM" src={vino.url} alt={vino.nombre}/>}
                             <h4 className="titulo-iral titulo-iralM">{vino.nombre}</h4>
                             <h5 className="titulo-origen">{vino.origen}</h5>
