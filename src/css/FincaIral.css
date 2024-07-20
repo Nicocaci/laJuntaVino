@@ -25,7 +25,9 @@ th {
 }
 
 
-/* MEDIA QUERIES */
+
+
+/* MEDIA QUERIES TABLET 1024 */
 @media(max-width:1024px){
     .table{
         width: 80%;
@@ -61,5 +63,33 @@ th {
         height: 8%;
     }
 
+}
+
+/*  MEDIA QUERIES CELU 768 PX */
+
+@media (max-width:1000px){
+    .tableM{
+        width: 100%;
+    }
+    .cardConteinerM{
+        width: 90%;
+        height: 380px !important;
+    }
+    .img-cardM{
+        height:180px !important;
+    }
+    .boton-detalleM{
+        width: 70%;
+    }
+    .titulo-iralM{
+        font-size: 15px;
+    }
+}
+
+
+@media (max-width:600px){
+    .cardQueriesC{
+        grid-template-columns: repeat(1,1fr) !important;
+    }
 }
 

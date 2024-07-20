@@ -34,8 +34,8 @@ export default function FincaIral (){
                     <img className="logoBodegas" src="https://fincairal.com/wp-content/uploads/2024/01/finca-iral-logo-Recuperado.png " alt="logoIral" />
                 </div>
                 <div className="container">
-                <div className="table-container">
-                <table className="table table-dark table-striped w-70 m-auto">
+                <div className="table-container tableM tableC">
+                <table className="table  table-dark table-striped w-70 m-auto">
                     <thead className="text-black titulos-estilo">
                         <th>Nombre del Producto</th>
                         <th>Origen</th>
@@ -52,13 +52,13 @@ export default function FincaIral (){
                     </tbody>
                 </table>
                 </div>
-                <div className="row container mt-5 m-auto cardQueries">
+                <div className="row container mt-5 m-auto  cardQueries cardQueriesM cardQueriesC ">
                     {vinosFincaIralFoto.map(vino =>
-                        <div className='col-md-3 cardConteiner cardConteinerF pb-5 ms-5 mb-3 mt-3'>
-                            {vino.url && <img className="img-card img-cardF" src={vino.url} alt={vino.nombre}/>}
-                            <h4 className="titulo-iral">{vino.nombre}</h4>
+                        <div className='col-md-3 cardConteiner cardConteinerF cardConteinerM pb-5 ms-5 mb-3 mt-3'>
+                            {vino.url && <img className="img-card img-cardF img-cardM" src={vino.url} alt={vino.nombre}/>}
+                            <h4 className="titulo-iral titulo-iralM">{vino.nombre}</h4>
                             <h5 className="titulo-origen">{vino.origen}</h5>
-                            <button className="btn btn-dark boton-detalleF boton-detalle mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
+                            <button className="btn btn-dark boton-detalleF boton-detalle boton-detalleM mt-3" onClick={() => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
                         </div>
                     )}
                 </div>
