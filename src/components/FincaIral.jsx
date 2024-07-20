@@ -36,7 +36,7 @@ export default function FincaIral (){
                 <div className="container">
                 <div className="table-container tableM tableC">
                 <table className="table  table-dark table-striped w-70 m-auto">
-                    <thead className="text-black titulos-estilo">
+                    <thead className="text-black titulos-estilo titulos-estiloC">
                         <th>Nombre del Producto</th>
                         <th>Origen</th>
                         <th>Precio</th>
@@ -44,9 +44,9 @@ export default function FincaIral (){
                     <tbody>
                         {vinosFincaIral.map(vino =>(
                             <tr key={vino.id}>
-                                <td className="descripcion">{vino.nombre}</td>
-                                <td className="descripcion">{vino.origen}</td>
-                                <td className="descripcion">${vino.precio}</td>
+                                <td className="descripcion descripcionC">{vino.nombre}</td>
+                                <td className="descripcion descripcionC">{vino.origen}</td>
+                                <td className="descripcion descripcionC">${vino.precio}</td>
                             </tr>
                         ))}
                     </tbody>

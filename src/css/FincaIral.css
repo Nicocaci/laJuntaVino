@@ -69,7 +69,7 @@ th {
 
 @media (max-width:1000px){
     .tableM{
-        width: 100%;
+        width: 100vw;
     }
     .cardConteinerM{
         width: 90%;
@@ -90,6 +90,12 @@ th {
 @media (max-width:600px){
     .cardQueriesC{
         grid-template-columns: repeat(1,1fr) !important;
+    }
+    .titulos-estiloC{
+        font-size:10px !important;
+    }
+    .descripcionC{
+        font-size: 10px !important;
     }
 }
 
