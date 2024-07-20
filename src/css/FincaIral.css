@@ -88,6 +88,9 @@ th {
 
 
 @media (max-width:600px){
+    .tableC{
+        width: 95vw;
+    }
     .cardConteinerC{
         width: 200px !important;
 
@@ -100,7 +103,7 @@ th {
         font-size: 10px !important;
     }
     .container{
-        margin-left: 1% ;
+        margin-left: 2px ;
 
     }
 }

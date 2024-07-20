@@ -11,6 +11,7 @@
 }
 .titulo-precios{
     margin-top: 20%;
+    overflow: hidden;
 }
 
 .navBar{

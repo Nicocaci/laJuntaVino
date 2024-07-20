@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  overflow-x: hidden;
   
   
 }
@@ -56,6 +57,7 @@ a{
   text-align: center;
   background-color: white;
   transition: transform 0.2s;
+  overflow: hidden;
 }
 .cardConteiner:hover{
   transform: scale(1.2);
@@ -111,18 +113,21 @@ a{
   font-family: "Playwrite DK Loopet", cursive;
   font-size: medium;
   margin-bottom: 5%;
+  overflow: hidden;
   
 }
 
 .año-vinos{
   font-family: "Playwrite HR", cursive;
   font-size: smaller;
+  overflow: hidden;
 }
 
 .boton-detalle{
   width: 50%;
   height: 7%;
   font-size: smaller !important ;
+  overflow: hidden;
 }
 
 .close-button{
