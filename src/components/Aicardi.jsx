@@ -83,53 +83,7 @@ export default function Aicardi() {
                         </table>
                     </div>
                 </div>
-                <div className="container row m-auto mt-5  cardQueries cardQueriesA cardQueriesCe ">
-                    <h5 className="text-black center bodegas">PARCELA UNICA RESERVA</h5>
-                    {vinosFamiliaAicardiPar.map(vino => (
-                        <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
-                            {vino.url && <img className="img-card img-cardA" src={vino.url} alt={vino.nombre} />}
-                            <h2 className="titulo-vino">{vino.nombre}</h2>
-                            <h3 className="titulo-origen">{vino.origen}</h3>
-                            <h4 className="año-vinos">Año:{vino.año}</h4>
-                            <button className="btn btn-dark boton-detalleA boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalleA">Ver Detalle..</p></button>
-                        </div>
-                    ))}
-                </div>
-                <div className="row container mt-5  m-auto cardQueries cardQueriesCe ">
-                    <h5 className="text-black center bodegas">SERIE TERRIOR</h5>
-                    {vinosFamiliaAicardiSer.map(vino => (
-                        <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
-                            {vino.url && <img className="img-card img-cardA" src={vino.url} alt={vino.nombre} />}
-                            <h2 className="titulo-vino">{vino.nombre}</h2>
-                            <h3 className="titulo-origen">{vino.origen}</h3>
-                            <h4 className="año-vinos">Año:{vino.año}</h4>
-                            <button className="btn btn-dark boton-detalleA boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalleA">Ver Detalle..</p></button>
-                        </div>
-                    ))}
-                </div>
-                <div className="row container mt-5 m-auto   cardQueries cardQueriesCe">
-                    <h5 className="text-black center bodegas">BARREL FERMENTED</h5>
-                    {vinosFamiliaAicardiBar.map(vino => (
-                        <div className='col-md-3 cardConteiner cardConteinerA pb-5 ms-5 mb-3 mt-3 '>
-                            {vino.url && <img className="img-card" src={vino.url} alt={vino.nombre} />}
-                            <h2 className="titulo-vino">{vino.nombre}</h2>
-                            <h3 className="titulo-origen">{vino.origen}</h3>
-                            <h4 className="año-vinos">Año:{vino.año}</h4>
-                            <button className="btn btn-dark boton-detalleA boton-detalle mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalleA">Ver Detalle..</p></button>
-                        </div>
-                    ))}
-                </div>
             </section>
-            <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>
-                <div className="verDetalleContainer2">
-                <div className='d-flex justify-content-end'>
-                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs close-button'>
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                    <img className="foto-detalle" src={verDetalle.url2} alt="asdasd" />
-                </div>
-            </div>
         </>);
 };
 

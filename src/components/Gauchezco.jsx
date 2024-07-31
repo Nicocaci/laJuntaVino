@@ -59,28 +59,8 @@ export default function Gauchezco() {
                             </tbody>
                         </table>
                     </div>
-                    <div className="row container mt-5  cardQueries cardQueriesCe">
-                    {vinosGauchezcoReserveFoto.map(vino =>(
-                        <div key={vino.id} className='col-md-3 cardConteiner cardConteinerM cardConteinerG pb-5 ms-5 mb-3 mt-3'>
-                            {vino.url && <img className="img-card img-cardG" src={vino.url} alt={vino.nombre}/>}
-                            <h4 className="titulo-gauchezco">{vino.nombre}</h4>
-                            <h3 className="titulo-origen">{vino.origen}</h3>
-                            <button className="btn btn-dark boton-detalleG boton-detalle boton-detalleM mt-3" onClick={(e) => setVerDetalle({ detalle: true, url2: vino.url2 })}><p className="titulo-detalle">Ver Detalle..</p></button>
-                        </div>
-                    ))}
-                    </div>
                 </div>
             </section>
-            <div className={verDetalle.detalle === true ? 'verDetalleContainer' : 'd-none'}>
-                <div className="verDetalleContainer2">
-                <div className='d-flex justify-content-end'>
-                    <button onClick={(e) => setVerDetalle({ detalle: false, url2: null })} className='btnNO btnSs close-button'>
-                        <i class="bi bi-x"></i>
-                    </button>
-                </div>
-                    <img className="foto-detalle" src={verDetalle.url2} alt="asdasd" />
-                </div>
-            </div>
 
         </>);
 };
